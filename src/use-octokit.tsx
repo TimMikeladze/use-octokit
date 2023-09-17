@@ -36,7 +36,7 @@ const fetcher = async ([endpoint, action, args, auth, client]: [
     );
   }
 
-  const fn = await (octokit.rest as any)?.[endpoint]?.[action];
+  const fn = (octokit.rest as any)?.[endpoint]?.[action];
 
   if (!fn) {
     throw new Error(`Octokit method ${endpoint}.${action} not found`);
