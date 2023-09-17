@@ -51,7 +51,7 @@ export const useOctokit = <
   Endpoint extends keyof RestEndpointMethodTypes,
   Action extends keyof RestEndpointMethodTypes[Endpoint],
   Args extends keyof RestEndpointMethodTypes[Endpoint][Action],
-  // @ts-ignore I don't think why this works 🥲
+  // @ts-ignore I don't know why this works, but it does 🥲
   Output = RestEndpointMethodTypes[Endpoint][Action]['response']['data'],
 >(
   endpoint: Endpoint | null,
