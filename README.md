@@ -59,7 +59,7 @@ const repos = useOctokit(
     auth: session.data?.user?.accessToken,
   },
   {
-    refreshInterval: page === 1 ? 0 : 1000 * 5,
+    refreshInterval: page === 1 ? 5000 : 0,
   }
 );
 

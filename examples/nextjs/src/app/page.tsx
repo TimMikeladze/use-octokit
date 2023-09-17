@@ -1,11 +1,11 @@
 'use client';
 
-import styles from './page.module.css';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useOctokit } from 'use-octokit';
+import styles from './page.module.css';
 
 export default function Example() {
   const session = useSession();
@@ -28,7 +28,7 @@ export default function Example() {
       auth: session.data?.user?.accessToken,
     },
     {
-      refreshInterval: page === 1 ? 0 : 1000 * 5,
+      refreshInterval: page === 1 ? 5000 : 0
     }
   );
 
