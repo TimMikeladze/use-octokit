@@ -1,6 +1,6 @@
 # 🐙 use-octokit
 
-A data-fetching hook built on top of the [Octokit Client](https://github.com/octokit/rest.js) and [SWR](https://swr.vercel.app/) for interacting with the Github API.
+A fully-typed data-fetching hook for the Github API. Built on top of [Octokit](https://github.com/octokit/rest.js) and [SWR](https://swr.vercel.app/).
 
 Use this hook inside a React component for a type-safe, data-fetching experience with caching, polling, and more.
 
