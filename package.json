@@ -1,7 +1,7 @@
 {
   "name": "use-octokit",
   "description": "A data-fetching hook built on top of the Octokit Client and SWR for interacting with the Github API. Use this hook inside a React component for a type-safe, data-fetching experience with caching, polling, and more.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Tim Mikeladze <tim.mikeladze@gmail.com>",
   "license": "MIT",
   "keywords": [
