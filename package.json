@@ -1,7 +1,7 @@
 {
   "name": "use-octokit",
   "description": "A fully-typed data-fetching hook for the Github API. Built on top of Octokit] and SWR. Use this hook inside a React component for a type-safe, data-fetching experience with caching, polling, and more.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Tim Mikeladze <tim.mikeladze@gmail.com>",
   "license": "MIT",
   "keywords": [
