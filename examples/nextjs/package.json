@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "link:self": "yarn yalc link use-octokit && yarn link use-octokit"
   },
   "dependencies": {
     "next": "13.4.19",

@@ -14,7 +14,7 @@ export default function Example() {
     auth: session.data?.user?.accessToken,
   });
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
 
   const repos = useOctokit(
     'search',
@@ -28,7 +28,7 @@ export default function Example() {
       auth: session.data?.user?.accessToken,
     },
     {
-      refreshInterval: page === 1 ? 5000 : 0
+      refreshInterval: page === 0 ? 1000 * 10 : 0
     }
   );
 
@@ -38,6 +38,7 @@ export default function Example() {
       {session.status === 'unauthenticated' && (
         <div>
           <button
+            type='button'
             onClick={() => {
               signIn('github');
             }}
@@ -58,6 +59,7 @@ export default function Example() {
             <p>{user.data.name}</p>
             <div>
               <button
+                type='button'
                 onClick={() => {
                   signOut();
                 }}
@@ -73,6 +75,7 @@ export default function Example() {
               <h2>Recently Updated Next.js Repositories</h2>
               <div>
                 <button
+                  type='button'
                   onClick={() => {
                     if (page > 1) {
                       setPage(page - 1);
@@ -84,6 +87,7 @@ export default function Example() {
               </div>
               <div>
                 <button
+                  type='button' 
                   onClick={() => {
                     setPage(page + 1);
                   }}

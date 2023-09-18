@@ -45,7 +45,7 @@ const user = useOctokit('users', 'getAuthenticated', undefined, {
 // user.isLoading
 // user.data.avatar_url
 
-const [page, setPage] = useState(1);
+const [page, setPage] = useState(0);
 
 const repos = useOctokit(
   'search',
@@ -59,11 +59,11 @@ const repos = useOctokit(
     auth: session.data?.user?.accessToken,
   },
   {
-    refreshInterval: page === 1 ? 5000 : 0,
+    refreshInterval: page === 0 ? 1000 * 10 : 0,
   }
 );
 
-// The final argument is an optional SWR config object.
+// The final argument is an optional SWR config object, in the example above the repos will be refetched every 10 seconds on the first page.
 // repos.isLoading
 // repos.data.items[0].full_name
 
